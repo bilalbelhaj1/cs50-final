@@ -24,20 +24,16 @@
               <li class="nav-item">
                 <a class="nav-link link-item" aria-current="page" href="index.html">Home</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link link-item" href="#">Link</a>
-              </li>
               {% if session["user_id"] %}
-                <li class="nav-item dropdown ">
-                  <a class="nav-link link-item dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    profile
-                  </a>
-                  <ul class="dropdown-menu profile-items">
-                    <li><a class="dropdown-item" href="#">saved</a></li>
-                    <li><a class="dropdown-item" href="#">Edit profile</a></li>
-                    <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item" href="/logout">Logout</a></li>
-                  </ul>
+                  <li class="nav-item">
+                    <a class="nav-link link-item" href="/logout" style="list-style: none;">logout</a>
+                  </li>
+              {% else %}
+                <li class="nav-item">
+                  <a class="nav-link link-item" href="/register" style="list-style: none;">Register</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link link-item" href="/login" style="list-style: none;">Login</a>
                 </li>
               {% endif %}
             </ul>
