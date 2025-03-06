@@ -1,0 +1,137 @@
+{% extends 'layout.html' %}
+    {% block main %}
+    <section id="hero">
+        <div class="display-phone">
+            <form action="/search">
+                <input type="search" name="animal" placeholder="Search By animal name">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </form>
+        </div>
+        <h1>WELCOME TO THE WILD WORLD</h1>
+        <p>where the wild comes to life. Discover the majesty of lions, tigers, bears, and more. Explore the untamed world of nature's fiercest and most graceful creatures. Join us on an adventure through the animal kingdom!</p>
+        <a href="/register" class="join-button">Join Us</a>
+    </section>
+    <section class="animals-container">
+        <h2>Meet the Majestic Creatures of the Wild</h2>
+        <p>Discover fascinating facts about the world’s most incredible animals. Explore their habitats, behaviors, and more. Click below to learn more!</p>
+        <div class="container">
+            <div class="animal">
+                <img src="https://animalcorner.org/wp-content/uploads/2015/02/lion-1.jpg" alt="Lion">
+                <div class="description">
+                    <h4>Lion</h4>
+                    <p>Lions have strong, compact bodies and powerful forelegs, teeth and jaws for pulling down and killing prey...</p>
+                </div>
+                <a href="/search?animal=lion">More</a>
+            </div>
+            <div class="animal">
+                <img src="https://cdn.cdnparenting.com/articles/2019/05/29150241/299422322.webp" alt="Fox">
+                <div class="description">
+                    <h4>Fox</h4>
+                    <p>Fox features typically include a triangular face, pointed ears, an elongated rostrum, and a bushy tail. They are digitigrade...</p>
+                </div>
+                <a href="/search?animal=fox">More</a>
+            </div>
+            <div class="animal">
+                <img src="https://cdn.cdnparenting.com/articles/2018/05/268586531-H-1024x700.webp" alt="Tiger">
+                <div class="description">
+                    <h4>Tiger</h4>
+                    <p>Tigers have reddish-orange coats with prominent black stripes, white bellies and white spots on their ears...</p>
+                </div>
+                <a href="/search?animal=tiger">More</a>
+            </div>
+            <div class="animal">
+                <img src="https://www.treehugger.com/thmb/oKLjFdsQ2kDAyxVwRR968XonM20=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/gray-wolf-593711917-72def2bd8ba74adaae39e817bbe45113.jpg" alt="Wolf">
+                <div class="description">
+                    <h4>Wolf</h4>
+                    <p>The wolf is the largest wild canine
+                        The base colour of the wolf's fur is a grey yellow...</p>
+                </div>
+                <a href="/search?animal=wolf">More</a>
+            </div>
+            <div class="animal">
+                <img src="https://img-aws.ehowcdn.com/750x500/photos.demandstudios.com/getty/article/83/200/92814623_XS.jpg" alt="gazel">
+                <div class="description">
+                    <h4>Gazelle</h4>
+                    <p>Gazels range in herds that usually contain 5 to 10 individuals but may include several hundred...</p>
+                </div>
+                <a href="/search?animal=gazelle">More</a>
+            </div>
+            <div class="animal">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/2010-kodiak-bear-1.jpg/1200px-2010-kodiak-bear-1.jpg" alt="Bear">
+                <div class="description">
+                    <h4>Bear</h4>
+                    <p>Bears are found on the continents of North America, South America, and Eurasia. Common characteristics...</p>
+                </div>
+                <a href="/search?animal=bear">More</a>
+            </div>
+        </div>
+    </section>
+    <section class="wild-books">
+        <h2>Intrsted Books about the wild</h2>
+        <p>If you are intrested in learning about the wild, you may found this books helpful</p>
+        <div class="books-container">
+            <div class="book">
+                <img src="https://images.booksense.com/images/472/839/9781954839472.jpg" >
+                <h3>The Call of the Wild</h3>
+                <p>The story of Buck, a dog who returns to the wild after being stolen and sold, discovering his primal instincts in the harsh Klondike wilderness.</p>
+                <a href="https://www.gutenberg.org/ebooks/215" target="_blank">Download</a>
+            </div>
+            <div class="book">
+                <img src="https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781684123247/once-upon-a-story-the-jungle-book-9781684123247_hr.jpg" alt="">
+                <h3>The Jungle Book</h3>
+                <p> Follow Mowgli, a boy raised by wolves, as he navigates life in the jungle, learning survival and friendship along the way.</p>
+                <a href="https://www.gutenberg.org/ebooks/236" target="_blank">Download</a>
+            </div>
+            <div class="book">
+                <img src="https://archive.org/download/wildanimalsihaveknown_1410_librivox/wild_animals_i_have_known_1410.jpg" >
+                <h3>Wild Animals I Have Known</h3>
+                <p>A collection of stories about wild animals, focusing on their behaviors and the challenges they face in nature.</p>
+                <a href="https://www.gutenberg.org/ebooks/3486" target="_blank">Download</a>
+            </div>
+        </div>
+    </section>
+    <section class="wild-fact">
+        <h2>Random Fun Fact about the wild</h2>
+        <p class="fact-container-des">Generate a Random Fun Fact about the wild world</p>
+        <div class="fact-container">
+            <p class="fact">
+                "Polar bears are strong swimmers and live in freezing Arctic environments."
+            </p>
+            <button id="newFactBtn">New Fact</button>
+        </div>
+    </section>
+    <section class="wild-video">
+        <h2>The Beauty of the Wild</h2>
+        <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/9DtCLcPEj-M?si=NWViV_1HzYsEp7mu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </section>
+    <section class="asked-question">
+        <h2>Frequently Asked Questions</h2>
+        <p>People often ask about The Wild World</p>
+        <div class="content-container">
+            <div class="question">What is The Wild World?</div>
+            <div class="answer">
+                The Wild World is a simple website where you can explore the wonders of wildlife. It's a place to learn about different animals and their habitats, helping you appreciate the beauty of nature.
+            </div>
+        </div>
+        <div class="content-container">
+            <div class="question">What can I find on The Wild World?</div>
+            <div class="answer">
+                On The Wild World, you'll find various pages about animals, their ecosystems, and facts to help you understand the importance of wildlife preservation. It's a great way to get to know more about the creatures that share our planet!
+            </div>
+        </div>
+        <div class="content-container">
+            <div class="question">Is there any interactive content on the site?</div>
+            <div class="answer">
+                Currently, the site is designed for informational purposes with a focus on showcasing wildlife through text and images. More features may be added as I continue to learn and improve the website.
+            </div>
+        </div>
+        <div class="content-container">
+            <div class="question">How can I explore more on The Wild World?</div>
+            <div class="answer">
+                Simply navigate through the pages, check out the different animal categories, and explore various facts. It's designed to be easy to use for anyone interested in the world of wildlife!
+            </div>
+        </div>
+    </section>    
+    {% endblock %}

@@ -1,0 +1,13 @@
+{% extends 'layout.html' %}
+
+{% block main %}
+    <div class="register-container">
+        <h2>Welcome back login to your account <img src="../static/forest.png" width="40" height="40"></h2>
+        <form action="/login", method="post">
+            <input class="input-field" type="text" placeholder="username" name="username" autocomplete="off" autofocus>
+            <input  class="input-field" type="password" placeholder="Password" name="password">
+            <button type="submit">Login <i class="fa fa-sign-in" aria-hidden="true"></i></button>
+            <p>Don't have an account <a href="/register">Register</a> </p>
+        </form>
+    </div>
+{% endblock %}

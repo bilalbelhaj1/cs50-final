@@ -1,0 +1,80 @@
+{% extends 'layout.html' %}
+{% block main %}
+    <!-- Animals Navigation -->
+    <section class="animal-hero">
+      <img src="{{ animal_data['gallery'][0] }}">
+      <div class="short-animal-description">
+        {% for key, value in animal_data["general_information"].items() %}
+             <h3>{{ key }}: {{ value }}</h3>
+        {% endfor %}
+      </div>
+    </section>
+    <section class="animal-description">
+        <div class="aanimal-info">
+            <h2>Description</h2>
+            <p>{{ animal_data["description"] }}</p>
+        </div>
+        <div class="animal-location">
+            <h2>{{ animal_data["general_information"]["name"] }} Origin</h2>
+            <p> {{ animal_data["origin"] }}</p>
+        </div>
+        <div class="animal-diet">
+            <h2>Eating Habits</h2>
+            <p>{{ animal_data["eating_habits"] }}</p>
+        </div>
+        <div class="animal-behavior">
+            <h2>Behavior</h2>
+            <p>{{ animal_data["behavior"] }}</p>
+        </div>
+    </section>
+    <section class="gallery">
+        <h2>{{ animal_data["general_information"]["name"] }} Gallery</h2>
+        <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item image-container active" data-bs-interval="10000">
+                <img src="{{ animal_data['gallery'][0] }}" class="d-block w-100">
+              </div>
+              {% for img in animal_data["gallery"] %}
+                <div class="carousel-item image-container" data-bs-interval="2000">
+                  <img src="{{ img }}" class="d-block w-100">
+                </div>
+              {% endfor %}
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+    </section>
+    <section class="facts">
+        <h2>Fun Facts About {{ animal_data["general_information"]["name"] }}s </h2>
+        <ul>
+            {% for fuct in animal_data["fun_facts"] %}
+                <li> <img src="{{ animal_data['gallery'][4] }}" width="40"> {{ fuct }}</li>
+            {% endfor %}
+        </ul>
+    </section>
+    <section class="asked-question">
+        <div class="accordion" id="accordionExample">
+          {% for question in animal_data["questions_and_answers"] %}
+            {% set unique_id = "q" ~ loop.index %}  {# Generate a unique ID #}
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button custom-button" type="button" data-bs-toggle="collapse" data-bs-target="#{{ unique_id }}" aria-expanded="true" aria-controls="{{ unique_id }}">
+                  {{ question["question"] }}
+                </button>
+              </h2>
+              <div id="{{ unique_id }}" class="accordion-collapse collapse " data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  {{ question["answer"] }}
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+    </section>
+{% endblock %}

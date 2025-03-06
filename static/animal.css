@@ -1,0 +1,153 @@
+
+.animal-hero{
+    width: 100%;
+    display: flex;
+    padding: 20px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+
+}
+.animal-hero img{
+    max-width: 600px;
+    width: 45%;
+    min-width: 400px;
+    margin-right: 10px;
+    max-height: 450px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+}
+
+.animal-hero .short-animal-description{
+    padding: 25px;
+    width: 50%;
+    min-width: 450px;
+    background-color: rgba(24, 202, 24, 0.67);
+}
+.animal-description{
+    padding: 20px;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+.animal-description div{
+    margin-bottom: 19px;
+}
+
+.animal-description h2{
+    border-bottom: 3px solid green;
+    width: 50%;
+    max-width: 400px;
+    margin: 0 auto;
+    font-size: 34px;
+}
+
+.animal-description p{
+    line-height: 1.5;
+    margin-top: 18px;
+    font-size: 22px;
+}
+
+.facts{
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: rgba(19, 236, 37, 0.747);
+}
+.facts h2{
+    margin: 20px auto;
+    padding: 10px;
+    background-color: rgb(26, 199, 40);
+    color: rgb(78, 76, 76);
+    font-weight: bold;
+    font-size: 42px;
+    max-width: 800px;
+}
+
+.facts li {
+    font-size: 20px;
+    background: rgb(255, 255, 255);
+    margin: 10px auto;
+    color: rgb(0, 0, 0);
+    padding: 0 10px 0 0;
+    border-radius: 20px;
+    list-style: none;
+    max-width: 800px;
+    display: flex; 
+    align-items: center;
+}
+.facts li img {
+    height: 100px; 
+    width: auto;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    margin-right: 10px;
+}
+
+.gallery{
+    padding: 20px;
+    max-width: 800px;
+    margin: 20px auto;
+}
+.gallery h2{
+    color: green;
+    text-align: center;
+}
+
+.gallery .image-container img{
+    max-height: 400px;
+}
+
+/* Style for the accordion button */
+.custom-button {
+    background-color: white !important;  /* Make button background white */
+    border: 1px solid #ccc;  /* Add a light border */
+    color: black;  /* Set text color to black */
+  }
+  
+  /* Style for the button when it's active (triggered) */
+  .custom-button:focus, .accordion-button:not(.collapsed) {
+    border: 2px solid green !important;  /* Add green border when triggered */
+    box-shadow: none;  /* Remove the default box shadow on focus */
+  }
+  
+  /* Optional: Change the color of the text when active */
+  .accordion-button:not(.collapsed) {
+    color: green;
+  }
+  
+
+@media(width:400px){
+    .animal-hero{
+        width:100vw;
+    }
+    .animal-hero img{
+        width:100%;
+        margin-bottom:20px;
+    }
+
+    .animal-hero .short-animal-description{
+        width: 100%;
+    }
+}
+
+
+
+@media (max-width: 914px) {
+    .animal-hero img{
+       width: 100%;
+       padding: 0;
+       max-width: 100%;
+    }
+    .animal-hero .short-animal-description{
+        width: 100%;
+     }
+}
+
+@media (max-width:500px)
+{
+    .animal-hero{
+        width: 100vw;
+        padding: 0;
+    }
+}

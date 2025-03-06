@@ -1,0 +1,14 @@
+{% extends 'layout.html' %}
+
+{% block main %}
+    <div class="register-container">
+        <h2>Register her and join the wild world comunity <img src="../static/forest.png" width="40" height="40"></h2>
+        <form action="/register", method="post">
+            <input class="input-field" type="text" placeholder="username" name="username" autocomplete="off" autofocus>
+            <input  class="input-field" type="password" placeholder="Password" name="password">
+            <input  class="input-field" type="email" placeholder="you@gmail.com" name="email" autocomplete="off">
+            <button type="submit">Register <i class="fa-solid fa-user-plus"></i></button>
+            <p>Already have an account <a href="/login">Login</a> </p>
+        </form>
+    </div>
+{% endblock %}
